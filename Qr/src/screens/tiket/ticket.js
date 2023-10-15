@@ -133,26 +133,23 @@ function TicketComponent() {
   };
   return (
 <div className="App">
-       <main>
+       <main style={{ marginTop: 90 }}>
          <Navigation/>
           <section>
            <div className="row">
           <div className="col-xl-4 col-sm-6 col-12 mb-4 tiket-card">
             <div className="continer">
               <div className="card-body ">
-              <div className="d-flex justify-content-center px-md-2">
-                <div className="text">
-                    <h2>What Is Your Issue!!</h2>
-                  </div>
-                  <div className="align-self-center">
-                    {/* <i className="fa-solid fa-ticket-simple text-primary fa-2x" /> */}
+              <div className="d-flex justify-content-center">
+                <div className="mb-3 text">
+                   <h2>What Is Your Issue!!</h2>
                   </div>
                 </div>
                 <div>
                 <MDBCol style={{ marginTop: 10 }}>
                 <div className="row">
                 <div class="col-sm">
-                <MDBInput className="input-2 text-groub" readOnly wrapperClass='mb-2'value={room} onChange={(e)=>setRoom(e.target.value)} label='Room' id='formControlLg' type='text' size="lg"/>
+                <MDBInput className="input-2 text-groub " readOnly wrapperClass='mb-2'value={room} onChange={(e)=>setRoom(e.target.value)} label='Room' id='formControlLg' type='text' size="lg"/>
                 </div>
                 <div class="col-sm">
                 <MDBInput className="input-2 text-groub" readOnly wrapperClass='mb-2'value={building} onChange={(e)=>setBulding(e.target.value)} label='Bulding' id='formControlLg' type='text' size="lg"/>
@@ -187,21 +184,21 @@ function TicketComponent() {
                 <MDBInput  className="input-group" wrapperClass='mb-3'value={email} onChange={(e)=>setEmail(e.target.value)}label='Email address' id='formControlLg' type='email' size="lg"/>
                 <MDBInput  className="input-group" wrapperClass='mb-3'value={phoneNumber} onChange={(e)=>setPhoneNumber(e.target.value)} label='Phone Number' id='formControlLg' type='text' size="lg"/>
                 <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12">
-                <select name="dd_1" id="dd_1" onChange={handelChange}className="mb-4 w-100 input" >
+                <select name="dd_1" id="dd_1" onChange={handelChange}className="mb-4 w-100 input selector" >
                      <option value="">Select issue</option>
                      {dd_data_1.map((x, i) => (
-                    <option key={i} value={x}>{x}</option>
+                    <option className='dd_1' key={i} value={x}>{x}</option>
                     ))}
                  </select>
 
                 {select?
-                <select name="dd_2" id="dd_2" className="mb-4 w-100 input"onChange={(e)=>setProblem(e.target.value)} >
+                <select name="dd_2" id="dd_2" className="mb-4 w-100 input selector"onChange={(e)=>setProblem(e.target.value)} >
                 <option value="">Select specific issue</option>
                 {DD2.map((x, i) => (
                     <option key={x.content} value={x.content}>{x.content}</option>
                     ))}
                  </select>:null}
-                  {show?<textarea class="textinput" id="query"className="mb-4 w-100" name="query" placeholder="Please enter your query..." onChange={(e)=>setProblem(e.target.value)}></textarea>:null}
+                  {show?<textarea class="textinput" id="query"className="mb-4 w-100 selector" name="query" placeholder="Please enter your query..." onChange={(e)=>setProblem(e.target.value)}></textarea>:null}
                 </div>
                <MDBBtn className="mb-4 w-100 btn" size="lg"onClick={()=>CreatTiket()}>Send</MDBBtn>
 

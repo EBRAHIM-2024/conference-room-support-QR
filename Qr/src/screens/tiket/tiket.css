@@ -10,7 +10,6 @@ background: linear-gradient(90deg, rgba(1, 165, 75, 1) 26%, rgba(4, 119, 193, 1)
 
 .text{
    font-family:'Times New Roman', Times, serif;
-   margin: 5px;
    color:black !important;
    font-weight: bold;
    font-size: 20px;
@@ -24,6 +23,9 @@ background: linear-gradient(90deg, rgba(1, 165, 75, 1) 26%, rgba(4, 119, 193, 1)
 
 .input-group{
    background-color: white !important;
+   border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+
 }
 .input-2{
    background-color: rgb(201, 198, 198)!important;
@@ -45,4 +47,24 @@ background: linear-gradient(90deg, rgba(1, 165, 75, 1) 26%, rgba(4, 119, 193, 1)
 .btn:hover{
    background-color: rgb(25, 25, 25);
 
+}
+
+
+option:hover {
+   background-color: aquamarine;
+    }
+.selector {
+  background-color: #252525;
+  color: #fff;
+  border: none;
+  border: 1px solid #595E57;
+  padding: 5px;
+  width: 150px;
+  overflow:hidden;
+}
+.selector option{
+padding:5px;
+}
+.selector option:hover{
+  background-color: #1BA1E2 !important;
 }

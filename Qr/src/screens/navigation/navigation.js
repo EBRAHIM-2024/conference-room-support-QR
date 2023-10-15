@@ -1,5 +1,6 @@
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
+import'./navigation.css';
 import React, { useContext } from 'react';
 
 const Navigation = () => {
@@ -9,7 +10,7 @@ const Navigation = () => {
 
 
     return (
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top " style={{height:80}}>
         <div class="container-fluid">
           <button
             class="navbar-toggler"
@@ -23,9 +24,11 @@ const Navigation = () => {
             <a class="navbar-brand mt- mt-lg-0">
               <img
                 src={logo}
-                height="20"
+                width={100}
+                height={40}
                 alt="MDB Logo"
-                loading="lazy"
+                // loading="lazy"
+
               />
             </a>
           </button>
@@ -39,17 +42,6 @@ const Navigation = () => {
                 loading="lazy"
               />
             </a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Dashboard</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
-              </li>
-            </ul>
           </div>
         </div>
 
