@@ -133,11 +133,8 @@ function TicketComponent() {
   };
   return (
 <div className="App">
-       <main>
+       <main className='contact_us_2'>
          <Navigation/>
-       <section className="mb-4 contact_us_2">
-        {/* <div className="card"> */}
-          <div className="card-body">
           <section>
            <div className="row">
           <div className="col-xl-4 col-sm-6 col-12 mb-4 tiket-card">
@@ -216,9 +213,6 @@ function TicketComponent() {
           </div>
           </div>
 
-      </section>
-          </div>
-        {/* </div> */}
       </section>
   </main>
   <ToastContainer/>
