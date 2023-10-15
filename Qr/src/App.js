@@ -7,7 +7,7 @@ import TicketComponent from './screens/tiket/ticket';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
      <Routes>
     <Route path="/" element={<Navigation/>}/>
     <Route path="/info" element={<InfoComponent />}/>

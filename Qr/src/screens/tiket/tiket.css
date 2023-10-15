@@ -1,3 +1,9 @@
+body{
+background: rgb(9,121,31);
+background: linear-gradient(90deg, rgba(9,121,31,1) 26%, rgba(0,121,255,1) 100%);
+}
+
+
 .continer{
    padding:5px 30px;
 }
@@ -29,36 +35,7 @@
     box-shadow: 0 0 10px #719ECE;
  }
 
-.contact_us_2 {
-  background: hsla(100, 43%, 50%, 1);
 
-  background: linear-gradient(
-    45deg,
-    hsla(100, 43%, 50%, 1) 0%,
-    hsla(140, 65%, 37%, 1) 30%,
-    hsla(207, 77%, 35%, 1) 70%,
-    hsla(204, 78%, 43%, 1) 100%
-  );
-
-  background: -moz-linear-gradient(
-    45deg,
-    hsla(100, 43%, 50%, 1) 0%,
-    hsla(140, 65%, 37%, 1) 30%,
-    hsla(207, 77%, 35%, 1) 70%,
-    hsla(204, 78%, 43%, 1) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    45deg,
-    hsla(100, 43%, 50%, 1) 0%,
-    hsla(140, 65%, 37%, 1) 30%,
-    hsla(207, 77%, 35%, 1) 70%,
-    hsla(204, 78%, 43%, 1) 100%
-  );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6DB549", endColorstr="#219C49", GradientType=1 );
-  padding: 3rem 0;
-}
 .btn{
    background-color: black;
    font-family:'Times New Roman', Times, serif;

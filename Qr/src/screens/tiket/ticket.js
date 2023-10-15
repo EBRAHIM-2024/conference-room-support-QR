@@ -133,7 +133,7 @@ function TicketComponent() {
   };
   return (
 <div className="App">
-       <main className='contact_us_2'>
+       <main>
          <Navigation/>
           <section>
            <div className="row">
