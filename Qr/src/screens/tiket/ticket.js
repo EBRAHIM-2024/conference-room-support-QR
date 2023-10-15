@@ -2,7 +2,7 @@ import { MDBBtn, MDBCol, MDBInput } from 'mdb-react-ui-kit';
 import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '../../App.css';
+import './tiket.css';
 import { useParams } from 'react-router-dom';
 import Navigation from '../navigation/navigation';
 
@@ -28,7 +28,7 @@ function TicketComponent() {
 
   useEffect(() => { }, [DD2]);
 
-  const dd_data_1 = ["Select issue type", "AV", "A/C","Cleaning Service","Curtains","Electricity","Other"];
+  const dd_data_1 = [ "AV", "A/C","Cleaning Service","Curtains","Electricity","Other"];
   const dd_data_2 = [{name: "AV", content: "Projecter is not working"}, {name: "AV", content: "cannot connect to the proector"},
                      {name: "A/C", content: "Cold"}, {name: "A/C", content: "Hot"},
                      {name: "Cleaning Service", content: "Room Smells"},{name: "Cleaning Service", content: "Room Is Dirty"},
@@ -135,35 +135,30 @@ function TicketComponent() {
 <div className="App">
        <main>
          <Navigation/>
-       <section className="mb-4">
+       <section className="mb-4 contact_us_2">
         {/* <div className="card"> */}
-          <div className="card-header text-center py-3">
-            <h5 className="mb-0 text-center">
-              <strong>Add Tiket</strong>
-            </h5>
-          </div>
           <div className="card-body">
           <section>
            <div className="row">
           <div className="col-xl-4 col-sm-6 col-12 mb-4 tiket-card">
-            <div className="card">
+            <div className="continer">
               <div className="card-body ">
-              <div className="d-flex justify-content-between px-md-1">
-                <div className="text-end">
-                    <p className="mb-0">What Is Your Issue!!</p>
+              <div className="d-flex justify-content-center px-md-2">
+                <div className="text">
+                    <h2>What Is Your Issue!!</h2>
                   </div>
                   <div className="align-self-center">
-                    <i className="fa-solid fa-ticket text-primary fa-3x" />
+                    {/* <i className="fa-solid fa-ticket-simple text-primary fa-2x" /> */}
                   </div>
                 </div>
                 <div>
                 <MDBCol style={{ marginTop: 10 }}>
                 <div className="row">
                 <div class="col-sm">
-                <MDBInput readOnly wrapperClass='mb-2'value={room} onChange={(e)=>setRoom(e.target.value)} label='Room' id='formControlLg' type='text' size="lg"/>
+                <MDBInput className="input-2 text-groub" readOnly wrapperClass='mb-2'value={room} onChange={(e)=>setRoom(e.target.value)} label='Room' id='formControlLg' type='text' size="lg"/>
                 </div>
                 <div class="col-sm">
-                <MDBInput readOnly wrapperClass='mb-2'value={building} onChange={(e)=>setBulding(e.target.value)} label='Bulding' id='formControlLg' type='text' size="lg"/>
+                <MDBInput className="input-2 text-groub" readOnly wrapperClass='mb-2'value={building} onChange={(e)=>setBulding(e.target.value)} label='Bulding' id='formControlLg' type='text' size="lg"/>
                 </div>
                 </div>
                 <div className="row" hidden>
@@ -191,12 +186,12 @@ function TicketComponent() {
                 <MDBInput wrapperClass='mb-2'value={to} onChange={(e)=>setTo(e.target.value)} label='Mobile' id='formControlLg' type='text' size="lg"/>
                 </div>
                 </div>
-                <MDBInput wrapperClass='mb-2'value={name} onChange={(e)=>setName(e.target.value)} label='Name' id='formControlLg' type='text' size="lg"/>
-                <MDBInput wrapperClass='mb-2'value={email} onChange={(e)=>setEmail(e.target.value)}label='Email address' id='formControlLg' type='email' size="lg"/>
-                <MDBInput wrapperClass='mb-2'value={phoneNumber} onChange={(e)=>setPhoneNumber(e.target.value)} label='Phone Number' id='formControlLg' type='text' size="lg"/>
+                <MDBInput  className="input-group" wrapperClass='mb-3'value={name} onChange={(e)=>setName(e.target.value)} label='Name' id='formControlLg' type='text' size="lg"/>
+                <MDBInput  className="input-group" wrapperClass='mb-3'value={email} onChange={(e)=>setEmail(e.target.value)}label='Email address' id='formControlLg' type='email' size="lg"/>
+                <MDBInput  className="input-group" wrapperClass='mb-3'value={phoneNumber} onChange={(e)=>setPhoneNumber(e.target.value)} label='Phone Number' id='formControlLg' type='text' size="lg"/>
                 <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12">
                 <select name="dd_1" id="dd_1" onChange={handelChange}className="mb-4 w-100 input" >
-                     <option value=""></option>
+                     <option value="">Select issue</option>
                      {dd_data_1.map((x, i) => (
                     <option key={i} value={x}>{x}</option>
                     ))}
@@ -211,7 +206,7 @@ function TicketComponent() {
                  </select>:null}
                   {show?<textarea class="textinput" id="query"className="mb-4 w-100" name="query" placeholder="Please enter your query..." onChange={(e)=>setProblem(e.target.value)}></textarea>:null}
                 </div>
-               <MDBBtn className="mb-4 w-100" size="lg"onClick={()=>CreatTiket()}>Send</MDBBtn>
+               <MDBBtn className="mb-4 w-100 btn" size="lg"onClick={()=>CreatTiket()}>Send</MDBBtn>
 
               </MDBCol>
               </div>
