@@ -109,9 +109,11 @@ function TicketComponent() {
       console.log(err);
      });
 
-      fetch('https://conference-room-support-app-server.onrender.com/api/employee/sendSMS',{
+      fetch('http://localhost:5000/api/employee/sendSMS',{
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+         headers: {
+        'Content-Type': 'application/json'
+        },
         body: JSON.stringify({
           body:`please cheack  Room ${room} it has  a problem`,
           to:`whatsapp:+966${inspectorPhone,employeePhone}`
@@ -172,14 +174,14 @@ function TicketComponent() {
                 </div>
                 </div>
 
-                <div className="row" hidden>
+                {/* <div className="row" hidden>
                 <div class="col-sm">
                 <MDBInput wrapperClass='mb-2'value={body} onChange={(e)=>setBody(e.target.value)} label='SMS' id='formControlLg' type='text' size="lg"/>
                 </div>
                 <div class="col-sm">
                 <MDBInput wrapperClass='mb-2'value={to} onChange={(e)=>setTo(e.target.value)} label='Mobile' id='formControlLg' type='text' size="lg"/>
                 </div>
-                </div>
+                </div> */}
                 <MDBInput  className="input-group" wrapperClass='mb-3'value={name} onChange={(e)=>setName(e.target.value)} label='Name' id='formControlLg' type='text' size="lg"/>
                 <MDBInput  className="input-group" wrapperClass='mb-3'value={email} onChange={(e)=>setEmail(e.target.value)}label='Email address' id='formControlLg' type='email' size="lg"/>
                 <MDBInput  className="input-group" wrapperClass='mb-3'value={phoneNumber} onChange={(e)=>setPhoneNumber(e.target.value)} label='Phone Number' id='formControlLg' type='text' size="lg"/>
