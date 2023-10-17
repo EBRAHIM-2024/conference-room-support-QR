@@ -109,7 +109,7 @@ function TicketComponent() {
       console.log(err);
      });
 
-      fetch('http://localhost:5000/api/employee/sendSMS',{
+      fetch('https://conference-room-support-app-server.onrender.com/api/employee/sendSMS',{
         method: 'POST',
          headers: {
         'Content-Type': 'application/json'
