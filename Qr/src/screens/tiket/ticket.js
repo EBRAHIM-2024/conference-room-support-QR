@@ -54,12 +54,14 @@ function TicketComponent() {
 
 
  useEffect(()=>{
-   fetch(`https://conference-room-support-app-server.onrender.com/api/employee/getRoomByID/${roomID}/`,{
+  const fetchRoom= async()=>{
+    const result= await fetch(`https://conference-room-support-app-server.onrender.com/api/employee/getRoomByID/${roomID}/`,{
      method:"POST",
      headers:{
          Authorization:"Bearer "+localStorage.getItem("jwt")
      }
- }).then(res=>res.json())
+ })
+ .then(res=>res.json())
  .then(result=>{
      console.log(result.response)
      setRoom(result.response.roomName)
@@ -69,10 +71,9 @@ function TicketComponent() {
      setInspector(result.response.inspector.inspector)
      setInspectorPhone(result.response.inspector.phoneNumber)
 
-
-
  })
-
+  }
+fetchRoom();
 },[])
 
 
@@ -111,9 +112,7 @@ function TicketComponent() {
 
       fetch('https://conference-room-support-app-server.onrender.com/api/employee/sendSMS',{
         method: 'POST',
-         headers: {
-        'Content-Type': 'application/json'
-        },
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
           body:`please cheack  Room ${room} it has  a problem`,
           to:`whatsapp:+966${inspectorPhone,employeePhone}`
@@ -126,6 +125,7 @@ function TicketComponent() {
          console.log(data.error);
         }
         else{
+
           console.log(data);
 
         };

@@ -3,20 +3,22 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navigation from './screens/navigation/navigation';
 import InfoComponent from './screens/info/Info';
 import TicketComponent from './screens/tiket/ticket';
+import { useEffect } from 'react';
 // import Navigation from './screens/navigation/navigation';
 
 function App() {
+
   return (
+    <>
     <BrowserRouter >
      <Routes>
     <Route path="/" element={<Navigation/>}/>
     <Route path="/info" element={<InfoComponent />}/>
     <Route path="/tiket/:roomID" element={<TicketComponent/>} />
-
-
-
     </Routes>
     </BrowserRouter>
+
+    </>
 
     // <BrowserRouter>
     // <Routes>
