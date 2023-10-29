@@ -15,7 +15,7 @@ const handleShow = () => navigate('/av');
 <div className="App">
   <div
         className="d-flex align-items-center justify-content-center"
-        style={{ height: "100vh" }}
+
       >
       </div>
       <Modal show={show}>
