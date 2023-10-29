@@ -6,11 +6,13 @@ import './av.css';
 
 function AVComponent() {
 
+
+
   return (
 <div className="App">
-<iframe frameborder="0"
- width="640" height="480"
- src="https://webgl0.s3.eu-west-2.amazonaws.com/Audio+Visual+System+Guide.pdf"></iframe>
+  <div id="container">
+    <iframe id="embed" src="https://webgl0.s3.eu-west-2.amazonaws.com/Audio+Visual+System+Guide.pdf"></iframe>
+</div>
 {/* <object data="https://webgl0.s3.eu-west-2.amazonaws.com/Audio+Visual+System+Guide.pdf"  type="application/pdf">
   <embed src="https://webgl0.s3.eu-west-2.amazonaws.com/Audio+Visual+System+Guide.pdf" type="application/pdf" />
 </object> */}
