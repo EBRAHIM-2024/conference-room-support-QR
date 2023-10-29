@@ -8,12 +8,12 @@ function AVComponent() {
 
   return (
 <div className="App">
-  <div>
- <iframe src="https://webgl0.s3.eu-west-2.amazonaws.com/Audio+Visual+System+Guide.pdf" target="_blank" width="100%" height="500px" />
- </div>
-  {/* <object data="https://webgl0.s3.eu-west-2.amazonaws.com/Audio+Visual+System+Guide.pdf" type="application/pdf" width="100%" height="1200px">
-    <p><a href="https://webgl0.s3.eu-west-2.amazonaws.com/Audio+Visual+System+Guide.pdf">You can click here to download the PDF file.</a></p>
-</object> */}
+  {/* <div>
+ <iframe src="https://webgl0.s3.eu-west-2.amazonaws.com/Audio+Visual+System+Guide.pdf" scrolling="auto" width="100%" height="500px" />
+ </div> */}
+<object data="https://webgl0.s3.eu-west-2.amazonaws.com/Audio+Visual+System+Guide.pdf" type="application/pdf">
+  <embed src="https://webgl0.s3.eu-west-2.amazonaws.com/Audio+Visual+System+Guide.pdf" type="application/pdf" />
+</object>
 
   {/* <object width="100%"  data="" type="application/pdf">
   </object> */}
