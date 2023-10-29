@@ -1,5 +1,5 @@
 import { Link, Outlet, useNavigate } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo1.png';
 import'./navigation.css';
 import React, { useContext } from 'react';
 
@@ -21,26 +21,43 @@ const Navigation = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <a class="navbar-brand mt- mt-lg-0">
-              <img
+            <a class="navbar-brand ">
+                <div class="item3">
+                  <img
                 src={logo}
-                width={100}
-                height={40}
+                height="44"
                 alt="MDB Logo"
-                // loading="lazy"
-
+                loading="lazy"
               />
+                </div>
+                <div className='grid-container '>
+                <div class="item2">
+                  <h1 className='title'>أرامكو السعودية<br/>
+               Saudi Aramco</h1>
+                </div>
+
+              </div>
+
             </a>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <a class="navbar-brand mt-2 mt-lg-0" href="#">
-              <img
+            <a class="navbar-brand" href="#">
+            <div className='grid-container '>
+                <div class="item3">
+                  <img
                 src={logo}
-                height="20"
+                height="44"
                 alt="MDB Logo"
                 loading="lazy"
               />
+                </div>
+                <div class="item2">
+                  <h1 className='title'>أرامكو السعودية<br/>
+               Saudi Aramco</h1>
+                </div>
+
+              </div>
             </a>
           </div>
         </div>

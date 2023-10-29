@@ -4,6 +4,7 @@ import Navigation from './screens/navigation/navigation';
 import InfoComponent from './screens/info/Info';
 import TicketComponent from './screens/tiket/ticket';
 import { useEffect } from 'react';
+import AVComponent from './screens/av/av';
 // import Navigation from './screens/navigation/navigation';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
      <Routes>
     <Route path="/" element={<Navigation/>}/>
     <Route path="/info" element={<InfoComponent />}/>
+    <Route path="/av" element={<AVComponent />}/>
     <Route path="/tiket/:roomID" element={<TicketComponent/>} />
     </Routes>
     </BrowserRouter>

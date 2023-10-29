@@ -1,8 +1,10 @@
 body{
-background: rgb(41, 174, 68);
-background: linear-gradient(90deg, rgba(1, 165, 75, 1) 26%, rgba(4, 119, 193, 1) 100%);
+ background-color: black;
+ opacity: 5px;
 }
-
+h2{
+   color: #fff;
+}
 
 .continer{
    padding:5px 30px;
@@ -14,10 +16,21 @@ background: linear-gradient(90deg, rgba(1, 165, 75, 1) 26%, rgba(4, 119, 193, 1)
    font-weight: bold;
    font-size: 20px;
 }
-.text-groub,label,#dd_1,#dd_2{
+label,#dd_1,#dd_2{
    font-family:'Times New Roman', Times, serif;
-   color:gray !important;
+   color:black !important;
    font-weight: bold;
+   font-size: 15px;
+}
+/* label{
+margin-top: 5px;
+
+} */
+
+.text-groub{
+    color: gray;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
    font-size: 15px;
 }
 
@@ -38,14 +51,21 @@ background: linear-gradient(90deg, rgba(1, 165, 75, 1) 26%, rgba(4, 119, 193, 1)
  }
 
 
-.btn{
-   background-color: black;
+.button{
+   background: linear-gradient(to right, rgba(0, 163, 224) 26%, rgba(132, 189, 0));
    font-family:'Times New Roman', Times, serif;
-   font-size: 15px;
+   font-size: 18px;
+   color: black;
+   font-weight: bold;
+   border-color: #719ECE;
+   box-shadow: 0 0 10px #719ECE;
+   border: 1px solid #595E57;
+   border-radius: 5px;
+   height: 50px;
 }
 
-.btn:hover{
-   background-color: rgb(25, 25, 25);
+.button:hover{
+background: linear-gradient(to right, rgba(0, 163, 224) 26%, rgba(132, 189, 0));
 
 }
 

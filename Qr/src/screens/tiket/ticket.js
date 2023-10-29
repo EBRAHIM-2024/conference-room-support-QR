@@ -3,9 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './tiket.css';
+import { useNavigate } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import Navigation from '../navigation/navigation';
-
+import AVComponent from '../av/av';
+import DialogComponent from '../dialog/dialog';
 
 function TicketComponent() {
   const [show, setShow] = useState(false);
@@ -25,6 +27,7 @@ function TicketComponent() {
   const [problem,setProblem]=useState();
   const [body,setBody]=useState();
   const [to,setTo]=useState();
+  const navigate=useNavigate();
 
   useEffect(() => { }, [DD2]);
 
@@ -41,7 +44,7 @@ function TicketComponent() {
   let foo = dd_data_2.filter(x => x.name === e.target.value);
    if ((e.target.value === "Other")) {
    setShow(true);
-   }else if (e.target.value === "AV","AC","Cleaning Service","Curtains","Electricity") {
+   }else if (e.target.value === "AC","Cleaning Service","Curtains","Electricity") {
     setSelect(true);
     setShow(false);
    }else{
@@ -144,17 +147,17 @@ fetchRoom();
               <div className="card-body ">
               <div className="d-flex justify-content-center">
                 <div className="mb-3 text">
-                   <h2>What Is Your Issue!!</h2>
+                   <h2>How can we help you? </h2>
                   </div>
                 </div>
                 <div>
                 <MDBCol style={{ marginTop: 10 }}>
                 <div className="row">
                 <div class="col-sm">
-                <MDBInput className="input-2 text-groub " readOnly wrapperClass='mb-2'value={room} onChange={(e)=>setRoom(e.target.value)} label='Room' id='formControlLg' type='text' size="lg"/>
+                <MDBInput className="input-group text-groub lable " readOnly wrapperClass='mb-2'value={room} onChange={(e)=>setRoom(e.target.value)} label='Room' id='formControlLg' type='text' size="lg"/>
                 </div>
                 <div class="col-sm">
-                <MDBInput className="input-2 text-groub" readOnly wrapperClass='mb-2'value={building} onChange={(e)=>setBulding(e.target.value)} label='Bulding' id='formControlLg' type='text' size="lg"/>
+                <MDBInput className="input-group text-groub" readOnly wrapperClass='mb-2'value={building} onChange={(e)=>setBulding(e.target.value)} label='Bulding' id='formControlLg' type='text' size="lg"/>
                 </div>
                 </div>
                 <div className="row" hidden>
@@ -186,7 +189,7 @@ fetchRoom();
                 <MDBInput  className="input-group" wrapperClass='mb-3'value={email} onChange={(e)=>setEmail(e.target.value)}label='Email address' id='formControlLg' type='email' size="lg"/>
                 <MDBInput  className="input-group" wrapperClass='mb-3'value={phoneNumber} onChange={(e)=>setPhoneNumber(e.target.value)} label='Phone Number' id='formControlLg' type='text' size="lg"/>
                 <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12">
-                <select name="dd_1" id="dd_1" onChange={handelChange}className="mb-4 w-100 input selector" >
+                <select name="dd_1" id="dd_1" onChange={handelChange}className="mb-4 w-100 input input-group" >
                      <option value="">Select issue</option>
                      {dd_data_1.map((x, i) => (
                     <option className='dd_1' key={i} value={x}>{x}</option>
@@ -194,15 +197,15 @@ fetchRoom();
                  </select>
 
                 {select?
-                <select name="dd_2" id="dd_2" className="mb-4 w-100 input selector"onChange={(e)=>setProblem(e.target.value)} >
+                <select name="dd_2" id="dd_2" className="mb-4 w-100 input input-group"onChange={(e)=>setProblem(e.target.value)} >
                 <option value="">Select specific issue</option>
                 {DD2.map((x, i) => (
                     <option key={x.content} value={x.content}>{x.content}</option>
                     ))}
                  </select>:null}
-                  {show?<textarea class="textinput" id="query"className="mb-4 w-100 selector" name="query" placeholder="Please enter your query..." onChange={(e)=>setProblem(e.target.value)}></textarea>:null}
+                  {show?<textarea class="textinput" id="query"className="mb-4 w-100 input-group" name="query" placeholder="Please enter your query..." onChange={(e)=>setProblem(e.target.value)}></textarea>:null}
                 </div>
-               <MDBBtn className="mb-4 w-100 btn" size="lg"onClick={()=>CreatTiket()}>Send</MDBBtn>
+               <button className="mb-4 w-100 button" size="lg"onClick={()=>CreatTiket()}>Send</button>
 
               </MDBCol>
               </div>
@@ -215,6 +218,8 @@ fetchRoom();
       </section>
   </main>
   <ToastContainer/>
+  <DialogComponent/>
+
     </div>
 
 
