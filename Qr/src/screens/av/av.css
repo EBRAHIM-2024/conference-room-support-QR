@@ -4,3 +4,11 @@ iframe{
    width: 50%;
 }
 
+img{
+   margin: 5px;
+   width: 50%;
+   border-color: #719ECE;
+   box-shadow: 0 0 10px #719ECE;
+   border: 1px solid white;
+   border-radius: 5px;
+}

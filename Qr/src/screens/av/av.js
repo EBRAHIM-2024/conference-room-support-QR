@@ -1,25 +1,42 @@
 import React from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import './av.css';
+import img1 from '../../assets/images/1.jpg';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 function AVComponent() {
+const navigate=useNavigate();
 
+const handleShow = () => navigate('/');
 
 
   return (
 <div className="App">
-  <div id="container">
-    <iframe id="embed" src="https://webgl0.s3.eu-west-2.amazonaws.com/Audio+Visual+System+Guide.pdf"></iframe>
-</div>
-{/* <object data="https://webgl0.s3.eu-west-2.amazonaws.com/Audio+Visual+System+Guide.pdf"  type="application/pdf">
-  <embed src="https://webgl0.s3.eu-west-2.amazonaws.com/Audio+Visual+System+Guide.pdf" type="application/pdf" />
-</object> */}
-<button>btn</button>
-
-  {/* <object width="100%"  data="" type="application/pdf">
-  </object> */}
+                <div>
+                  <img className='col-xl-6 col-sm-12 col-12'
+                src={img1}
+                alt="MDB Logo"
+                loading="lazy"
+              />
+              </div>
+              <div>
+                  <img className='col-xl-6 col-sm-12 col-12'
+                src={img1}
+                alt="MDB Logo"
+                loading="lazy"
+              />
+              </div>
+              <div>
+                  <img className='col-xl-6 col-sm-12 col-12'
+                src={img1}
+                alt="MDB Logo"
+                loading="lazy"
+              />
+              </div>
+               <button className="col-xl-6 col-sm-6 col-6 button"onClick={()=>navigate(-1)} size="lg">Need more help?</button>
  </div>
 
 
