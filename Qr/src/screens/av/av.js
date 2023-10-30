@@ -15,28 +15,30 @@ const handleShow = () => navigate('/');
 
   return (
 <div className="App">
-                <div>
+                <div className='img'>
                   <img className='col-xl-6 col-sm-12 col-12'
                 src={img1}
                 alt="MDB Logo"
                 loading="lazy"
               />
               </div>
-              <div>
+              <div className='img'>
                   <img className='col-xl-6 col-sm-12 col-12'
                 src={img1}
                 alt="MDB Logo"
                 loading="lazy"
               />
-              </div>
-              <div>
+              </div >
+              <div className='img'>
                   <img className='col-xl-6 col-sm-12 col-12'
                 src={img1}
                 alt="MDB Logo"
                 loading="lazy"
               />
-              </div>
-               <button className="col-xl-6 col-sm-6 col-6 button"onClick={()=>navigate(-1)} size="lg">Need more help?</button>
+              </div >
+              <div >
+               <button className="col-xl-6 col-sm-12 col-12 button2"onClick={()=>navigate(-1)} size="lg">Need more help?</button>
+               </div>
  </div>
 
 
