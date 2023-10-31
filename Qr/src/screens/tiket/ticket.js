@@ -117,7 +117,7 @@ fetchRoom();
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
-          body:`please cheack  Room ${room} it has  a problem`,
+          body: `Please check which conference room ${room} has a problem ${problem}`,
           to:`whatsapp:+966${inspectorPhone,employeePhone}`
         })
       }).then(response => response.json())
